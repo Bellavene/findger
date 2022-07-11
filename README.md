@@ -11,4 +11,4 @@ Features:
 Installation:
   Add contents of this commands.py to your ~/.config/ranger/commands.py file
 
-Todo: Add support for color tags.
+Todo: Add cross support for Finder's color tags.
