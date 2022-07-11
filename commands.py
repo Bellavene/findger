@@ -91,12 +91,6 @@ class follow_files(Command):
             self.fm.execute_console("map <PAGEDOWN> move down=1   pages=True")
             self.fm.execute_console("map <PAGEUP>   move up=1     pages=True")
 
-# Opens quicklook in fullscreen on active file
-class quicklook(Command):
-
-    def execute(self):
-            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to activate' -e 'tell application \"System Events\" to keystroke \"y\" using {command down, option down}'")
-
 # Toggle Finder's red and ranger's standard tags on selected files
 class red_tag(Command):
 
