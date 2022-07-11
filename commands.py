@@ -66,19 +66,27 @@ class follow_files(Command):
             self.fm.execute_console("shell -s open /Applications/iTerm.app")
 
             # Change to your directional keys
-            self.fm.execute_console("map <UP> chain move up=1; follow_files_in_finder")
-            self.fm.execute_console("map <DOWN> chain move down=1; follow_files_in_finder")
-            self.fm.execute_console("map <LEFT> chain move left=1; follow_files_in_finder")
-            self.fm.execute_console("map <RIGHT> chain move right=1; follow_files_in_finder")
+            self.fm.execute_console("map <UP>       chain move up=1;    follow_files_in_finder")
+            self.fm.execute_console("map <DOWN>     chain move down=1;  follow_files_in_finder")
+            self.fm.execute_console("map <LEFT>     chain move left=1;  follow_files_in_finder")
+            self.fm.execute_console("map <RIGHT>    chain move right=1; follow_files_in_finder")
+            self.fm.execute_console("map <HOME>     chain move to=0;    follow_files_in_finder")
+            self.fm.execute_console("map <END>      chain move to=-1;   follow_files_in_finder")
+            self.fm.execute_console("map <PAGEDOWN> chain move down=1   pages=True; follow_files_in_finder")
+            self.fm.execute_console("map <PAGEUP>   chain move up=1     pages=True; follow_files_in_finder")
         else:
             # Closes Finder Window
             self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to close its front window'")
             
-            # Reverts key maps
-            self.fm.execute_console("map <UP> move up=1")
-            self.fm.execute_console("map <DOWN> move down=1")
-            self.fm.execute_console("map <LEFT> move left=1")
-            self.fm.execute_console("map <RIGHT> move right=1")
+            # Reverts key maps on stop file following
+            self.fm.execute_console("map <UP>       move up=1")
+            self.fm.execute_console("map <DOWN>     move down=1")
+            self.fm.execute_console("map <LEFT>     move left=1")
+            self.fm.execute_console("map <RIGHT>    move right=1")
+            self.fm.execute_console("map <HOME>     move to=0")
+            self.fm.execute_console("map <END>      move to=-1")
+            self.fm.execute_console("map <PAGEDOWN> move down=1   pages=True")
+            self.fm.execute_console("map <PAGEUP>   move up=1     pages=True")
 
 # Opens quicklook in fullscreen on active file
 class quicklook(Command):
