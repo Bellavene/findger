@@ -8,4 +8,7 @@ Features:
   3. Reveals selected files from Ranger in Finder.
   4. Start's fullscreen quicklook on active file in Finder's preview.
 
+Installation:
+  Add contents of this commands.py to your ~/.config/ranger/commands.py file
+
 Todo: Add support for color tags.
