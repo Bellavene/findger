@@ -14,11 +14,14 @@ Installation:
   2. Edit the code / change to your terminal application and set your key mappings for directional keys.
   3. Add key maps to your ~/.config/ranger/rc.conf
       
-      Example:
+      Examples:
       
       map <Space> follow_files
+      
       map <Alt><Space> quicklook
+      
       map <alt>/  show_files_in_finder
+      
       map <alt>?  get_finder
       
 
