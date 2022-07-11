@@ -7,8 +7,7 @@ Features:
   1. Support of any file preview right in Finder with Gallery view mode.
   2. Reveals selected file from active Finder window to Ranger.
   3. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
-  4. Start's fullscreen quicklook on active file in Finder's preview.
-  5. Toggle red Finder's and Ranger's tag on selected files. (Needs a dependency)
+  4. Toggle red Finder's and Ranger's tag on selected files. (Needs a dependency)
 ```
 
 Installation:
@@ -22,7 +21,6 @@ Installation:
       Examples:
 
       map <Space> follow_files
-      map <Alt><Space> quicklook
       map <alt>/  show_files_in_finder
       map <alt>?  get_finder
       map ' red_tag
