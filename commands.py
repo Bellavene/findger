@@ -94,7 +94,7 @@ class quicklook(Command):
     def execute(self):
             self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to activate' -e 'tell application \"System Events\" to keystroke \"y\" using {command down, option down}'")
 
-# Add/Remove Finder's red and ranger's standard tags to a file
+# Toggle Finder's red and ranger's standard tags on selected files
 class red_tag(Command):
 
     def execute(self):
