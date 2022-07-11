@@ -71,8 +71,8 @@ class follow_files(Command):
             self.fm.execute_console("map <LEFT> chain move left=1; follow_files_in_finder")
             self.fm.execute_console("map <RIGHT> chain move right=1; follow_files_in_finder")
         else:
-            # Restores prefered view mode in Finder (mine is List View CMD+2) and closes Finder Window. Can be reduced to closing window only, for speed.
-            self.fm.execute_console("shell -s open -a Finder; osascript -e 'tell application \"System Events\" to keystroke \"2\" using command down'; osascript -e 'tell application \"Finder\" to close its front window'")
+            # Closes Finder Window
+            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to close its front window'")
             
             # Reverts key maps
             self.fm.execute_console("map <UP> move up=1")
