@@ -93,3 +93,10 @@ class quicklook(Command):
 
     def execute(self):
             self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to activate' -e 'tell application \"System Events\" to keystroke \"y\" using {command down, option down}'")
+
+# Add/Remove Finder's red and ranger's standard tags to a file
+class red_tag(Command):
+
+    def execute(self):
+        self.fm.execute_console('shell -s if [ "$(tag -l -N %s)" = "red" ]; then; tag -r "red" %s; elif [ "$(tag -l -N %s)" = "" ]; then; tag -a "red" %s; fi')
+        self.fm.execute_console("tag_toggle")
