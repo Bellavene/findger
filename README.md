@@ -1,5 +1,5 @@
 # findger
-Ranger plugin that adds support for macos Finder.
+Ranger plugin that adds support for macos Finder. Best used along with auto tiling window manager.
 
 Features:
 
