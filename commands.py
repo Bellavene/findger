@@ -11,7 +11,7 @@ class show_files_in_finder(Command):
         subprocess.check_output(["osascript", "-e", reveal_script, "-e", activate_script])
 
 
-# Reveal files from Finder
+# Reveal file from Finder
 class get_finder(Command):
 
     def execute(self):
