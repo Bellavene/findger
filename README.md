@@ -11,6 +11,15 @@ Features:
 Installation:
 
   1. Add contents of this commands.py to your ~/.config/ranger/commands.py file.
-  2. Edit the code, change to your terminal application and set your key mappings for directional keys.
+  2. Edit the code / change to your terminal application and set your key mappings for directional keys.
+  3. Add key maps to your ~/.config/ranger/rc.conf
+      
+      Example:
+      
+      map <Space> follow_files
+      map <Alt><Space> quicklook
+      map <alt>/  show_files_in_finder
+      map <alt>?  get_finder
+      
 
 Todo: Add cross support for Finder's color tags.
