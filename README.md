@@ -24,4 +24,4 @@ Installation:
 
 Todo: Add cross support for Finder's color tags.
 
-![Preview](/repository/preview.png?raw=true "Preview")
+![Preview](/preview.png?raw=true "Preview")
