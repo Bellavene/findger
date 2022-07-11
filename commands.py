@@ -56,13 +56,13 @@ class follow_files(Command):
         if follow:
             self.fm.execute_console("shell -s open -R %s")
             
-            # Updates Window Manager Layout
+            # Updates Window Manager Layout CMD+OPT+CTRL+SHIFT+R / Change to yours 
             self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"r\" using control down, command down, option down, shift down'")
 
-            # Sets Finder window to Gallery View
+            # Sets Finder window to Gallery View via standard key CMD+4
             self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"4\" using command down'")
 
-            # Change to your terminal app
+            # Change to your terminal app location
             self.fm.execute_console("shell -s open /Applications/iTerm.app")
 
             # Change to your directional keys
