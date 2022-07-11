@@ -9,13 +9,15 @@ Features:
   4. Start's fullscreen quicklook on active file in Finder's preview.
   5. Toggle red Finder's and Ranger's tag on files. (Needs Tag
 ```
+
 Installation:
-```
+
   1. Add contents of this commands.py to your ~/.config/ranger/commands.py file.
   2. Edit the code / change to your terminal application and set your key mappings for directional keys.
   3. Install [Tag](https://github.com/jdberry/tag) for color tags support.
   4. Add key maps to your ~/.config/ranger/rc.conf
 
+```
       Examples:
 
       map <Space> follow_files
