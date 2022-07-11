@@ -71,7 +71,7 @@ class follow_files(Command):
             self.fm.execute_console("map <LEFT> chain move left=1; follow_files_in_finder")
             self.fm.execute_console("map <RIGHT> chain move right=1; follow_files_in_finder")
         else:
-            self.fm.execute_console("shell -s finder-close")
+            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to close its front window'")
             self.fm.execute_console("map <UP> move up=1")
             self.fm.execute_console("map <DOWN> move down=1")
             self.fm.execute_console("map <LEFT> move left=1")
