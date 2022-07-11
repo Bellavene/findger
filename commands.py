@@ -62,7 +62,7 @@ class follow_files(Command):
             # Sets Finder window to Gallery View via standard key CMD+4
             self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"4\" using command down'")
 
-            # Change to your terminal app location
+            # Moves focus back to terminal after initialization / Change to your terminal app location
             self.fm.execute_console("shell -s open /Applications/iTerm.app")
 
             # Change to your directional keys
