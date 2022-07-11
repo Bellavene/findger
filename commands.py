@@ -75,8 +75,11 @@ class follow_files(Command):
             self.fm.execute_console("map <PAGEDOWN> chain move down=1   pages=True; follow_files_in_finder")
             self.fm.execute_console("map <PAGEUP>   chain move up=1     pages=True; follow_files_in_finder")
         else:
+            # Closes Finder's window. Or delete this line, uncomment and edit next line if you want to set view mode back to desired, although it is slower.
+            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to close its front window'")
+
             # Revert Finder's view mode and closes it's Window / Change number to desired mode: 1 - Icon mode, 2 - List mode, 3 - Column mode
-            self.fm.execute_console("shell -s open -a Finder; osascript -e 'tell application \"System Events\" to keystroke \"2\" using command down' -e 'tell application \"Finder\" to close its front window'; open -a iTerm")
+            # self.fm.execute_console("shell -s open -a Finder; osascript -e 'tell application \"System Events\" to keystroke \"2\" using command down' -e 'tell application \"Finder\" to close its front window'; open -a iTerm")
             
             # Reverts key maps on stop file following
             self.fm.execute_console("map <UP>       move up=1")
