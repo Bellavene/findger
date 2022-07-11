@@ -1,5 +1,6 @@
 # findger
 Ranger plugin that adds support for macos Finder.
+
 Features:
 
   1. Support of any file preview right in Finder with Gallery view mode.
