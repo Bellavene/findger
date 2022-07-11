@@ -7,7 +7,7 @@ Features:
   2. Reveals selected file from active Finder window to Ranger.
   3. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
   4. Start's fullscreen quicklook on active file in Finder's preview.
-  5. Toggle red Finder's and Ranger's tag on files. (Needs a dependency)
+  5. Toggle red Finder's and Ranger's tag on selected files. (Needs a dependency)
 ```
 
 Installation:
