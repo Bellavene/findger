@@ -54,7 +54,7 @@ class follow_files(Command):
         global follow
         follow = not follow
         if follow:
-            # Too speed up things you can merge all shell commands bellow through ";"
+            # Too speed up things you can merge all shell commands bellow through ";", or delete them and uncomment one liner.
             
             # Creates a finder window with file revealed
             self.fm.execute_console("shell -s open -R %s")
@@ -65,6 +65,9 @@ class follow_files(Command):
             # Sets Finder window to Gallery View, removes toolbar and moves focus back to terminal
             self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell' -e 'tell application \"System Events\" to keystroke tab using command down'")
 
+            # One liner
+            # self.fm.execute_console("shell -s open -R %s; osascript -e 'tell application \"System Events\" to keystroke \"r\" using {control down, command down, option down, shift down}' -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell' -e 'tell application \"System Events\" to keystroke tab using command down'")
+            
             # Change to your directional keys
             self.fm.execute_console("map <UP>       chain move up=1;    follow_files_in_finder")
             self.fm.execute_console("map <DOWN>     chain move down=1;  follow_files_in_finder")
