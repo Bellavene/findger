@@ -54,6 +54,8 @@ class follow_files(Command):
         global follow
         follow = not follow
         if follow:
+            # Too speed up things you can merge all shell commands bellow through ";"
+            
             self.fm.execute_console("shell -s open -R %s")
             
             # Updates Window Manager Layout CMD+OPT+CTRL+SHIFT+R / Change to yours or delete entirely if not needed
