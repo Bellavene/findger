@@ -59,8 +59,8 @@ class follow_files(Command):
             # Updates Window Manager Layout CMD+OPT+CTRL+SHIFT+R / Change to yours or delete entirely if not needed
             self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"r\" using {control down, command down, option down, shift down}'")
 
-            # Sets Finder window to Gallery View via standard key CMD+4
-            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"4\" using command down'")
+            # Sets Finder window to Gallery View and removes toolbar
+            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell'")
 
             # Moves focus back to terminal after initialization / Change to your terminal app location
             self.fm.execute_console("shell -s open -a iTerm")
@@ -75,11 +75,8 @@ class follow_files(Command):
             self.fm.execute_console("map <PAGEDOWN> chain move down=1   pages=True; follow_files_in_finder")
             self.fm.execute_console("map <PAGEUP>   chain move up=1     pages=True; follow_files_in_finder")
         else:
-            # Closes Finder's window. Or delete this line, uncomment and edit next line if you want to set view mode back to desired, although it is slower.
-            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to close its front window'")
-
-            # Revert Finder's view mode and closes it's Window / Change number to desired mode: 1 - Icon mode, 2 - List mode, 3 - Column mode
-            # self.fm.execute_console("shell -s open -a Finder; osascript -e 'tell application \"System Events\" to keystroke \"2\" using command down' -e 'tell application \"Finder\" to close its front window'; open -a iTerm")
+            # Revert Finder's view mode and closes it's Window / Change to desired view mode if needed.
+            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to true' -e 'end tell' -e 'tell application \"Finder\" to set the current view of the front Finder window to list view' -e 'tell application \"Finder\" to close its front window'")
             
             # Reverts key maps on stop file following
             self.fm.execute_console("map <UP>       move up=1")
