@@ -13,7 +13,7 @@ Features:
 Installation:
 
   1. Add contents of this commands.py to your ~/.config/ranger/commands.py file.
-  2. Edit the code / change to your terminal application and set your key mappings for directional keys.
+  2. Edit the code to set your key mappings for directional keys.
   3. Install [Tag](https://github.com/jdberry/tag) for color tags support.
   4. Add key maps to your ~/.config/ranger/rc.conf
 
