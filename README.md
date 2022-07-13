@@ -28,4 +28,4 @@ Installation:
 
 Todo: Add better cross support for Finder's color tags.
 
-![Preview](https://github.com/Bellavene/findger/blob/main/Preview.png?raw=true "Preview")
+![Preview](https://github.com/Bellavene/findger/blob/main/Preview.gif?raw=true "Preview")
