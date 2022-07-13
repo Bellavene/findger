@@ -2,6 +2,8 @@
 
 A [Ranger](https://github.com/ranger/ranger) plugin/script that adds support for macos Finder. Best used along with auto tiling window manager. Uses finder to preview virtually anything, the rest depends on quicklook plugins you use.
 
+![screen-gif](./preview.gif)
+
 Features:
 ```
   1. Support of any file preview right in Finder with Gallery view mode.
@@ -27,5 +29,3 @@ Installation:
 ```
 
 Todo: Add better cross support for Finder's color tags.
-
-![screen-gif](./preview.gif)
