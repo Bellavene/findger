@@ -63,7 +63,7 @@ class follow_files(Command):
             self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"r\" using {control down, command down, option down, shift down}'")
 
             # Sets Finder window to Gallery View, removes toolbar and moves focus back to terminal
-            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell' -e 'tell application \"System Events\"' -e 'key down command' -e 'keystroke tab' -e 'key up command' -e 'end tell'")
+            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell' -e 'tell application \"System Events\" to keystroke tab using command down'")
 
             # Change to your directional keys
             self.fm.execute_console("map <UP>       chain move up=1;    follow_files_in_finder")
