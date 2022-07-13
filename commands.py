@@ -54,7 +54,7 @@ class follow_files(Command):
         global follow
         follow = not follow
         if follow:
-            # Too speed up things you can merge all shell commands bellow through ";", or delete them and uncomment one liner.
+            # Too speed up things you delete them and uncomment one liner.
             
             # Creates a finder window with file revealed
             self.fm.execute_console("shell -s open -R %s")
