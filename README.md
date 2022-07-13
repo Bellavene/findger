@@ -1,6 +1,6 @@
 # findger
 
-A [Ranger](https://github.com/ranger/ranger) plugin/script that adds support for macos Finder. Best used along with auto tiling window manager. Uses finder to preview virtually anything, the rest depends on quicklook plugins you use.
+A [Ranger](https://github.com/ranger/ranger) plugin/script that adds support for macos Finder. Uses Finder to preview virtually anything, the rest depends on quicklook plugins you use.
 
 ![screen-gif](./preview.gif)
 
