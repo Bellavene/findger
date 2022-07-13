@@ -56,16 +56,14 @@ class follow_files(Command):
         if follow:
             # Too speed up things you can merge all shell commands bellow through ";"
             
+            # Creates a finder window with file revealed
             self.fm.execute_console("shell -s open -R %s")
             
             # Updates Window Manager Layout CMD+OPT+CTRL+SHIFT+R / Change to yours or delete entirely if not needed
             self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"r\" using {control down, command down, option down, shift down}'")
 
-            # Sets Finder window to Gallery View and removes toolbar
-            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell'")
-
-            # Moves focus back to terminal after initialization / Change to your terminal app location
-            self.fm.execute_console("shell -s open -a iTerm")
+            # Sets Finder window to Gallery View, removes toolbar and moves focus back to terminal
+            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell' -e 'tell application \"System Events\"' -e 'key down command' -e 'keystroke tab' -e 'key up command' -e 'end tell'")
 
             # Change to your directional keys
             self.fm.execute_console("map <UP>       chain move up=1;    follow_files_in_finder")
@@ -77,7 +75,7 @@ class follow_files(Command):
             self.fm.execute_console("map <PAGEDOWN> chain move down=1   pages=True; follow_files_in_finder")
             self.fm.execute_console("map <PAGEUP>   chain move up=1     pages=True; follow_files_in_finder")
         else:
-            # Revert Finder's view mode and closes it's Window / Change to desired view mode if needed.
+            # Revert Finder's view mode and closes it's Window / Change to desired view mode if needed
             self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to true' -e 'end tell' -e 'tell application \"Finder\" to set the current view of the front Finder window to list view' -e 'tell application \"Finder\" to close its front window'")
             
             # Reverts key maps on stop file following
