@@ -29,3 +29,5 @@ Installation:
 ```
 
 Todo: Add better cross support for Finder's color tags.
+
+<img width="2128" alt="Screenshot 2022-07-18 at 13 55 41" src="https://user-images.githubusercontent.com/77557804/179497347-9f0ba654-f6dc-4c17-834d-77e5b5d670fd.png">
