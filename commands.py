@@ -34,8 +34,8 @@ class follow_files_in_finder(Command):
 
     def execute(self):
         import subprocess
-        files = '"{0}"'.format(self.fm.thisfile.path)
-        script1 = "set thePath to {{{0}}} as text".format(files)
+        file = '"{0}"'.format(self.fm.thisfile.path)
+        script1 = "set thePath to {{{0}}} as text".format(file)
         script2 = "set name_ to name of (info for thePath)"
         script3 = "set a_ to count thePath"
         script4 = "set b_ to count name_"
