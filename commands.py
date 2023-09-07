@@ -54,19 +54,11 @@ class follow_files(Command):
         global follow
         follow = not follow
         if follow:
-            # Too speed up things delete lines below and uncomment one liner.
-            
-            # Creates a finder window with file revealed
-            self.fm.execute_console("shell -s open -R %s")
-            
-            # Updates Window Manager Layout CMD+OPT+CTRL+SHIFT+R / Change to yours or delete entirely if not needed
-            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"r\" using {control down, command down, option down, shift down}'")
+            # Updates Window Manager Layout CMD+OPT+CTRL+SHIFT+R / Uncomment if needed.
+            # self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to keystroke \"r\" using {control down, command down, option down, shift down}'")
 
-            # Sets Finder window to Gallery View, removes toolbar and moves focus back to terminal, in this case to iTerm
-            self.fm.execute_console("shell -s osascript -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell' -e 'tell application \"iTerm\" to activate'")
-
-            # One liner
-            # self.fm.execute_console("shell -s open -R %s; osascript -e 'tell application \"System Events\" to keystroke \"r\" using {control down, command down, option down, shift down}' -e 'tell application \"System Events\" to click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to false' -e 'end tell' -e 'tell application \"iTerm\" to activate'")
+            # Sets Finder window to Gallery View and moves focus back to terminal, in this case to iTerm
+            self.fm.execute_console("shell -s open -R %s; sleep 0.2; osascript -e 'tell application \"System Events\"' -e 'Click menu item \"as Gallery\" of menu 1 of menu bar item \"View\" of menu bar 1 of application process \"Finder\"' -e 'end tell'; osascript -e 'tell application \"iTerm\" to activate'")
             
             # Change to your directional keys
             self.fm.execute_console("map <UP>       chain move up=1;    follow_files_in_finder")
