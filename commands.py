@@ -71,7 +71,7 @@ class follow_files(Command):
             self.fm.execute_console("map <PAGEUP>   chain move up=1     pages=True; follow_files_in_finder")
         else:
             # Revert Finder's view mode and closes it's Window / Change to desired view mode if needed
-            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\"' -e 'tell the front window to set toolbar visible to true' -e 'end tell' -e 'tell application \"Finder\" to set the current view of the front Finder window to list view' -e 'tell application \"Finder\" to close its front window'")
+            self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to set the current view of the front Finder window to list view' -e 'tell application \"Finder\" to close its front window'")
             
             # Reverts key maps on stop file following
             self.fm.execute_console("map <UP>       move up=1")
