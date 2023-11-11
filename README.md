@@ -24,7 +24,8 @@ Installation:
 
   1. Add contents of commands.py to your ~/.config/ranger/commands.py file.
   2. Copy executables to somewhere in the $PATH. (Example: /usr/local/bin/)
-  3. Add key maps to your ~/.config/ranger/rc.conf
+  3. Copy setting for mpv from mpv.conf to ~/.config/mpv/mpv.conf
+  4. Add key maps to your ~/.config/ranger/rc.conf
 
 Keymap Examples:
 ```
