@@ -26,34 +26,49 @@ Keymap Examples:
 ```
 #Toggle followed file preview
       map <Space> chain show_files_in_finder; toggle_fplug
+
 #Show selected files in Finder
       map <alt>/  show_files_in_finder
+
 #Go to the path of the fron Finder wondow
       map <alt>?  get_finder
+
 #Mark file
       map ' red_tag
+
 #Open Finder's file info on selected file
       map <a-i> shell -f finder-file-info %f
+
 #Create a playlist in mpv from the selected folder
       map MM shell Create-playlist %p
+
 #Append selected to the playlist in mpv
       map Mm shell Append-to-playlist %p
+
 #Play in sync 2 selected video files
       map m2 shell mpv-play-synced %p
+
 #Play in sync 3 selected video files
       map m3 shell mpv-play-synced-3 %p
+
 #Play in sync 4 selected video files
       map m4 shell mpv-play-synced-4 %p
+
 #Encode selected file
       map mm shell encode %s
+
 #Edit encode script settings
       map mM shell nano /usr/local/bin/encode
+
 #Encode directory
       map md console shell encode-dir%space
+
 #Edit encode-dir script settings
       map mD shell nano /usr/local/bin/encode-dir
+
 #Encode selected to mp3
       map ma shell encode-mp3 %s
+
 #Edit mp3 encoding script settings
       map mA shell nano /usr/local/bin/encode-mp3
 ```
