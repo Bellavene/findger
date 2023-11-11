@@ -1,0 +1,2 @@
+#!/bin/zsh
+mpv --lavfi-complex='[vid1] [vid2] hstack [t1] ; [vid3] [vid4] hstack [t2] ; [t1] [t2] vstack [vo]' $1 --external-file=$2 --external-file=$3 --external-file=$4

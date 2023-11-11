@@ -1,0 +1,2 @@
+#!/bin/zsh
+ls -1 $@ >> /Users/Klutchevski/Music/Music.m3u
