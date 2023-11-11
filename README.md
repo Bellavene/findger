@@ -55,19 +55,19 @@ Keymap Examples:
 #Play in sync 4 selected video files
       map m4 shell mpv-play-synced-4 %p
 
-#Encode selected file
+#Encode selected files
       map mm shell encode %s
 
 #Edit encode script settings
       map mM shell nano /usr/local/bin/encode
 
-#Encode directory
+#Encode active directory
       map md console shell encode-dir%space
 
 #Edit encode-dir script settings
       map mD shell nano /usr/local/bin/encode-dir
 
-#Encode selected to mp3
+#Encode selected files to mp3
       map ma shell encode-mp3 %s
 
 #Edit mp3 encoding script settings
