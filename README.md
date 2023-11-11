@@ -1,6 +1,6 @@
 # findger
 
-A [Ranger](https://github.com/ranger/ranger) plugin/script that adds cross support for macos Finder and [mpv](https://github.com/ranger/ranger).
+A [Ranger](https://github.com/ranger/ranger) plugin/script that adds cross support for macos Finder and mpv player.
 Uses Finder to preview virtually anything, the rest depends on quicklook plugins you use. Or mpv player for instant playback of video files and image previews.
 
 ![screen-gif](./preview.gif)
