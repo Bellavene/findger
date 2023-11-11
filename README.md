@@ -14,13 +14,21 @@ Features:
   6. Options to Encode with ffmpeg
   7. Synced playback of video files (up to 4) through mpv.
 ```
+
+
 Dependencies:
-[Tag](https://github.com/jdberry/tag)
+
+brew install [tag](https://github.com/jdberry/tag)
+brew install [mpv](https://github.com/mpv-player/mpv)
+brew install [ffmpeg](https://github.com/jdberry/tag)
+
 
 Installation:
+
 Add contents of commands.py to your ~/.config/ranger/commands.py file.
 Copy executables to somewhere in the $PATH. (Example: /usr/local/bin/)
 Add key maps to your ~/.config/ranger/rc.conf
+
 
 Keymap Examples:
 ```
