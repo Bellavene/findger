@@ -18,9 +18,7 @@ Features:
 
 Dependencies:
 
-brew install [tag](https://github.com/jdberry/tag)
-brew install [mpv](https://github.com/mpv-player/mpv)
-brew install [ffmpeg](https://github.com/jdberry/tag)
+brew install [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv) [ffmpeg](https://github.com/jdberry/tag)
 
 
 Installation:
