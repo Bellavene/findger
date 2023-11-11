@@ -9,29 +9,82 @@ Features:
   1. Support of any file preview right in Finder with Gallery view mode.
   2. Reveals selected file from active Finder window to Ranger.
   3. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
-  4. Toggle red Finder's and Ranger's tag on selected files. (Needs a dependency)
+  4. Toggle red Finder's and Ranger's tag on selected files.
+  5. 
 ```
+Dependencies:
+[Tag](https://github.com/jdberry/tag)
 
 Installation:
 
-  1. Add contents of this commands.py to your ~/.config/ranger/commands.py file.
-  2. Edit the code to set your key mappings for directional keys.
-  3. Install [Tag](https://github.com/jdberry/tag) for file color tagging support.
-  4. Add key maps to your ~/.config/ranger/rc.conf
+Add contents of this commands.py to your ~/.config/ranger/commands.py file.
+Copy executables to somewhere in the $PATH. (Example: /usr/local/bin/)
+Add key maps to your ~/.config/ranger/rc.conf
 
+Keymap Examples:
+      Toggle followed file preview
 ```
-      Examples:
-
-      map <Space> map <Space> chain show_files_in_finder; toggle_fplug
+      map <Space> chain show_files_in_finder; toggle_fplug
+```
+      Show selected files in Finder
+```
       map <alt>/  show_files_in_finder
+```
+      Go to the path of the fron Finder wondow
+```
       map <alt>?  get_finder
+```
+      Mark file
+```
       map ' red_tag
+```
+      Open Finder's file info on selected file
+```
       map <a-i> shell -f finder-file-info %f
+```
+      Create a playlist in mpv from the selected folder
+```
       map MM shell Create-playlist %p
+```
+      Append selected to the playlist in mpv
+```
       map Mm shell Append-to-playlist %p
+```
+      Play in sync 2 selected video files
+```
       map m2 shell mpv-play-synced %p
+```
+      Play in sync 3 selected video files
+```
       map m3 shell mpv-play-synced-3 %p
+```
+      Play in sync 4 selected video files
+```      
       map m4 shell mpv-play-synced-4 %p
+```
+      Encode selected file
+```
+      map mm shell encode %s
+```
+      Edit encode script settings
+```
+      map mM shell nano /usr/local/bin/encode
+```
+      Encode directory
+```
+      map md console shell encode-dir%space
+```
+      Edit encode-dir script settings
+```
+      map mD shell nano /usr/local/bin/encode-dir
+```
+      Encode selected to mp3
+```
+      map ma shell encode-mp3 %s
+```
+      Edit mp3 encoding script settings
+```
+      map mA shell nano /usr/local/bin/encode-mp3
 ```
 
 Todo: Add better cross support for Finder's color tags.
