@@ -22,10 +22,16 @@ Installation:
 ```
       Examples:
 
-      map <Space> follow_files
+      map <Space> map <Space> chain show_files_in_finder; toggle_fplug
       map <alt>/  show_files_in_finder
       map <alt>?  get_finder
       map ' red_tag
+      map <a-i> shell -f finder-file-info %f
+      map MM shell Create-playlist %p
+      map Mm shell Append-to-playlist %p
+      map m2 shell mpv-play-synced %p
+      map m3 shell mpv-play-synced-3 %p
+      map m4 shell mpv-play-synced-4 %p
 ```
 
 Todo: Add better cross support for Finder's color tags.
