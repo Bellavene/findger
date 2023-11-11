@@ -22,11 +22,15 @@ Copy executables to somewhere in the $PATH. (Example: /usr/local/bin/)
 Add key maps to your ~/.config/ranger/rc.conf
 
 Keymap Examples:
+
       Toggle followed file preview
+      
 ```
       map <Space> chain show_files_in_finder; toggle_fplug
 ```
+
       Show selected files in Finder
+
 ```
       map <alt>/  show_files_in_finder
 ```
