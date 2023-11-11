@@ -19,7 +19,7 @@ Installation:
 
   1. Add contents of commands.py to your ~/.config/ranger/commands.py file.
   2. Copy executables to somewhere in the $PATH. (Example: /usr/local/bin/)
-  3. Install dependencies: 'brew install [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv) [ffmpeg](https://github.com/FFmpeg/FFmpeg)'
+  3. Install dependencies: '[brew](https://brew.sh) install [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv) [ffmpeg](https://github.com/FFmpeg/FFmpeg)'
   4. Copy setting for mpv from mpv.conf to ~/.config/mpv/mpv.conf
   5. Add key maps to your ~/.config/ranger/rc.conf
 
