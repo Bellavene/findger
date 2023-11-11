@@ -1,6 +1,7 @@
 # findger
 
-A [Ranger](https://github.com/ranger/ranger) plugin/script that adds support for macos Finder. Uses Finder to preview virtually anything, the rest depends on quicklook plugins you use.
+A [Ranger](https://github.com/ranger/ranger) plugin/script that adds cross support for macos Finder and [mpv](https://github.com/ranger/ranger).
+Uses Finder to preview virtually anything, the rest depends on quicklook plugins you use. Or mpv player for instant playback of video files and image previews.
 
 ![screen-gif](./preview.gif)
 
@@ -10,8 +11,8 @@ Features:
   2. Reveals selected file from active Finder window to Ranger.
   3. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
   4. Toggle red Finder's and Ranger's tag on selected files.
-  5. Instant playback or image preview through mpv
-  6. Options to Encode with ffmpeg
+  5. Instant playback or image preview through mpv.
+  6. Options to encode files with ffmpeg
   7. Synced playback of video files (up to 4) through mpv.
 ```
 
