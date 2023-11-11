@@ -1,0 +1,68 @@
+#!/bin/bash
+export VBITRATE=$1
+export ABITRATE=$2
+
+for file in ./*.*
+do
+  file_name="${file##*/}"
+  original_name="./"$file_name
+  now=$(date +"%y%m%d")
+
+    if [ "$VBITRATE" == "" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -c:v h264_videotoolbox -vf scale=-2:720 -b:v 7000k -b:a 128k "${file_name%.*} S $now.mp4"
+    elif [ "$VBITRATE" == "b" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -c:v h264_videotoolbox -vf scale=-2:1080 -b:v 12000k -b:a 320k "${file_name%.*} B $now.mp4"
+    elif [ "$VBITRATE" == "hevc" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -c:v hevc_videotoolbox -b:v 15000k -b:a 320k "${file_name%.*} HEVC $now.mp4"
+    elif [ "$VBITRATE" == "copy" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -vcodec copy -acodec copy "${file_name%.*} $now.mp4"
+    elif [ "$VBITRATE" == "prores" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -vcodec prores -profile:v 3 -acodec pcm_s16le "${file_name%.*} PRORES.mov"
+    elif [ "$VBITRATE" == "proxy" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -vcodec prores -profile:v 0 -acodec pcm_s16le "${file_name%.*} PROXY.mov"
+    elif [ "$VBITRATE" == "mp3" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -ab 192k -ar 48000 -sample_fmt s16 "${file_name%.*}.mp3"
+    elif [ "$VBITRATE" == "gif" ]; then
+      ~/.cargo/bin/ffpb -i "$original_name" -gifflags +transdiff "${file_name%.*}.gif"
+    else
+      ~/.cargo/bin/ffpb -i "$original_name" -c:v h264_videotoolbox -b:v "${VBITRATE}k" -b:a "${ABITRATE}k" "${file_name%.*} $now.mp4"
+    fi
+done
+
+
+# #!/bin/bash
+# export FROM_FORMAT=$1
+# export TO_FORMAT=$2
+#
+# mkdir "$TO_FORMAT"
+# for file in ./*."$FROM_FORMAT"
+# do
+  # file_name="${file##*/}"
+  # original_name="./"$file_name
+  # result_name="./$TO_FORMAT/${file_name%.*}.$TO_FORMAT"
+#
+  # echo "Converting file: $original_name to $result_name"
+  # if [ "$FROM_FORMAT" == "arw" ]; then
+    # dcraw  -c -w "$original_name" | convert - "$result_name"
+  # else
+    # if [ "$TO_FORMAT" == "h264" ]; then
+      # ffmpeg -i "$original_name" \
+        # -vf "scale='min(1280,iw)':'min(720,ih)'" -c:v libx264 -b:v 3500k \
+        # -profile:v high -preset slow -crf 22 \
+        # -c:a libfdk_aac -b:a 128k -cutoff 18000 "$result_name"
+    # elif [ "$TO_FORMAT" == "h265" ]; then
+      # ffmpeg -i "$original_name" \
+        # -c:v libx265 -b:v 3500k -level 4.1 \
+        # -profile:v high -preset slow -crf 22 \
+        # -c:a libfdk_aac -b:a 128k -cutoff 18000 "$result_name"
+    # elif [ "$TO_FORMAT" == "flac" ]; then
+      # ffmpeg -i "$original_name" -f flac -ar 48000 -sample_fmt s16 "$result_name"
+    # elif [ "$TO_FORMAT" == "mp3" ]; then
+      # ffmpeg -i "$original_name" -ab 320k -ar 48000 -sample_fmt s16 "$result_name"
+    # elif [ "$TO_FORMAT" == "gif" ]; then
+      # ffmpeg -i "$original_name" -gifflags +transdiff "$result_name"
+    # else
+      # ffmpeg -i "$original_name" "$result_name"
+    # fi
+  # fi
+# done

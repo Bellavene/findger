@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+for f in "$@"
+    do
+name=$(basename "$f")
+dir=$(dirname "$f")
+
+~/.cargo/bin/ffpb -i "$f" -vn -b:a 320k \
+"$dir/${name%.*}.mp3"
+
+done
