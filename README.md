@@ -12,8 +12,7 @@ Features:
   3. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
   4. Toggle red Finder's and Ranger's tag on selected files.
   5. Toggle instant playback or image preview through mpv.
-  6. Options to encode files with ffmpeg
-  7. Synced playback of video files (up to 4) through mpv.
+  6. Synced playback of video files (up to 4) through mpv.
 ```
 
 Installation:
