@@ -1,5 +1,4 @@
 #!/bin/zsh
-
 osascript - "$@" <<EOF
 on run argv
  set cmd to argv
