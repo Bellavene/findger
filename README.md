@@ -10,7 +10,7 @@ Features:
   1. Follow selection in Finder. Useful with Gallery view mode (Command+4 in Finder).
   2. Reveals selected file from active Finder window to Ranger.
   3. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
-  4. Toggle red Finder's and Ranger's tag on selected files.
+  4. Toggle synced red tag on selection in Finder and Ranger.
   5. Toggle instant playback or image preview through mpv.
   6. Synced playback of video files (up to 4) through mpv.
 ```
