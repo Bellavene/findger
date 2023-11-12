@@ -67,7 +67,7 @@ class red_tag(Command):
         self.fm.execute_console('shell -s if [ "$(tag -l -N %s)" = "red" ]; then; tag -r "red" %s; elif [ "$(tag -l -N %s)" = "" ]; then; tag -a "red" %s; fi')
         self.fm.execute_console("tag_toggle")
 
-# MPV Preview
+# MPV Follow/Preview selection
 import time
 class toggle_termplug(Command):
 
@@ -96,16 +96,3 @@ class termplug(Command):
                 # self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate'")
         except Exception as e:
             self.fm.notify(e)
-
-
-# MPV create playlist
-class Append_playlist(Command):
-
-    def execute(self):
-        self.fm.execute_console('shell -s ls -1 $@ >> ~/Music/Music.m3u')
-
-class Create_playlist(Command):
-
-    def execute(self):
-        self.fm.execute_console('shell -s ls -1 $@ > ~/Music/Music.m3u')
-
