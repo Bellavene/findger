@@ -1,2 +1,0 @@
-#!/bin/zsh
-ls -1 $@ >> ~/Music/Music.m3u
