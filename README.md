@@ -32,7 +32,7 @@ Keymap Examples:
 # Show selected files in Finder
       map <alt>/  show_files_in_finder
 
-# Go to the path of the fron Finder wondow
+# Go to path of the front Finder window
       map <alt>?  get_finder
 
 # Mark file in ranger and Finder
@@ -41,7 +41,7 @@ Keymap Examples:
 # Open Finder's file info on selected file
       map <a-i> shell -f finder-file-info %f
 
-# Toggle instant video playback / Images previews with mpv
+# Toggle instant video playback / Image previews with mpv
       map p toggle_termplug
 
 # Play in sync 2 selected video files
