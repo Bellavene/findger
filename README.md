@@ -22,8 +22,7 @@ Installation:
   3. Install dependencies: '[brew install](https://brew.sh) [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv)'
   4. Copy setting for mpv from mpv.conf to ~/.config/mpv/mpv.conf
   5. Add key maps to your ~/.config/ranger/rc.conf
-  6. Grant permissions to `System Settings > Privacy & Security > Accessibility > iTerm`
-  7. And too System `Settings > Privacy & Security > Accessibility > osascript`
+  6. Grant permissions to `System Settings > Privacy & Security > Accessibility > iTerm` and too System `Settings > Privacy & Security > Accessibility > osascript`
 
 Keymap Examples:
 
