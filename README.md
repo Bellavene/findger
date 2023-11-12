@@ -41,12 +41,6 @@ Keymap Examples:
 #Open Finder's file info on selected file
       map <a-i> shell -f finder-file-info %f
 
-#Create a playlist in mpv from the selected folder
-      map MM shell Create-playlist %p
-
-#Append selected to the playlist in mpv
-      map Mm shell Append-to-playlist %p
-
 #Play in sync 2 selected video files
       map m2 shell mpv-play-synced %p
 
