@@ -19,7 +19,7 @@ Installation:
 
   1. Add contents of commands.py to your ~/.config/ranger/commands.py file.
   2. Copy executables to somewhere in the $PATH. (If you don't know: /usr/local/bin/)
-  3. Install dependencies: '[brew install](https://brew.sh) [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv) [iterm](https://iterm2.com)'
+  3. Install dependencies: '[brew install](https://brew.sh) [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv) [iterm](https://iterm2.com)' If you are using another terminal application, then change iterm in the scripts to desired manually.
   4. Copy setting for mpv from mpv.conf to ~/.config/mpv/mpv.conf
   5. Add key maps to your ~/.config/ranger/rc.conf
   6. Grant permissions in `System Settings > Privacy & Security > Accessibility` to `iTerm` and `osascript`
