@@ -48,7 +48,6 @@ if containsElement "$FILE_MIME" "${VALID_MIMETYPES[@]}"
     if [[ $1 == --exit ]]; then
         mpv-close-front
         # killall mpv-bundle
-        # killall IINA
     else
         open --background -a /Applications/mpv.app "$1"
         # osascript -e 'tell application \"System Events\"' -e 'tell application process \"mpv\"' -e 'keystroke \"p\" using control down' -e 'end tell' -e 'end tell' -e 'tell application \"System Events\"' -e 'tell application process \"mpv\"' -e 'keystroke \"l\" using control down' -e 'end tell' -e 'end tell' -e 'tell application \"iTerm\" to activate'
