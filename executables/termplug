@@ -51,18 +51,8 @@ if containsElement "$FILE_MIME" "${VALID_MIMETYPES[@]}"
         # killall IINA
     else
         open --background -a /Applications/mpv.app "$1"
-        # /Applications/mpv.app/Contents/MacOS/mpv "$1"
         # osascript -e 'tell application \"System Events\"' -e 'tell application process \"mpv\"' -e 'keystroke \"p\" using control down' -e 'end tell' -e 'end tell' -e 'tell application \"System Events\"' -e 'tell application process \"mpv\"' -e 'keystroke \"l\" using control down' -e 'end tell' -e 'end tell' -e 'tell application \"iTerm\" to activate'
     fi
   # else
     # killall mpv-bundle
-    # killall iina
 fi
-
-# if [[ $1 == --exit ]]; then
-    # killall mpv-bundle
-    # # killall TermPlug
-# else
-    # /Applications/mpv.app/Contents/MacOS/mpv "$1"
-    # # open -g -a /Applications/TermPlug.app "$1"
-# fi
