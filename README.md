@@ -20,53 +20,38 @@ Installation:
 
   1. Add contents of commands.py to your ~/.config/ranger/commands.py file.
   2. Copy executables to somewhere in the $PATH. (Example: /usr/local/bin/)
-  3. Install dependencies: '[brew install](https://brew.sh) [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv) [ffmpeg](https://github.com/FFmpeg/FFmpeg)'
+  3. Install dependencies: '[brew install](https://brew.sh) [tag](https://github.com/jdberry/tag) [mpv](https://github.com/mpv-player/mpv)'
   4. Copy setting for mpv from mpv.conf to ~/.config/mpv/mpv.conf
   5. Add key maps to your ~/.config/ranger/rc.conf
 
 Keymap Examples:
 ```
-#Toggle followed file preview
+# Toggle followed file preview with Finder
       map <Space> chain show_files_in_finder; toggle_fplug
 
-#Show selected files in Finder
+# Show selected files in Finder
       map <alt>/  show_files_in_finder
 
-#Go to the path of the fron Finder wondow
+# Go to the path of the fron Finder wondow
       map <alt>?  get_finder
 
-#Mark file
+# Mark file in ranger and Finder
       map ' red_tag
 
-#Open Finder's file info on selected file
+# Open Finder's file info on selected file
       map <a-i> shell -f finder-file-info %f
 
-#Play in sync 2 selected video files
+# Toggle synced mpv playback
+      map p toggle_termplug
+
+# Play in sync 2 selected video files
       map m2 shell mpv-play-synced %p
 
-#Play in sync 3 selected video files
+# Play in sync 3 selected video files
       map m3 shell mpv-play-synced-3 %p
 
-#Play in sync 4 selected video files
+# Play in sync 4 selected video files
       map m4 shell mpv-play-synced-4 %p
-
-#Encode selected files
-      map mm shell encode %s
-
-#Edit encode script settings
-      map mM shell nano /usr/local/bin/encode
-
-#Encode active directory
-      map md console shell encode-dir%space
-
-#Edit encode-dir script settings
-      map mD shell nano /usr/local/bin/encode-dir
-
-#Encode selected files to mp3
-      map ma shell encode-mp3 %s
-
-#Edit mp3 encoding script settings
-      map mA shell nano /usr/local/bin/encode-mp3
 ```
 
 Todo: Add better cross support for Finder's color tags.
