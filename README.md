@@ -41,7 +41,7 @@ Keymap Examples:
 # Open Finder's file info on selected file
       map <a-i> shell -f finder-file-info %f
 
-# Toggle synced mpv playback
+# Toggle instant video playback / Images previews with mpv
       map p toggle_termplug
 
 # Play in sync 2 selected video files
