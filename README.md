@@ -5,7 +5,7 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
 
 ![screen-gif](./preview.gif)
 
-Features:
+# Features:
 ```
   1. Follow selection in Finder. Useful with Gallery view mode (Command+4 in Finder).
   2. Reveals selected file from active Finder window to Ranger.
@@ -15,7 +15,7 @@ Features:
   6. Synced playback of video files (up to 4) through mpv.
 ```
 
-Installation:
+# Installation:
 
   1. Add contents of commands.py to your ~/.config/ranger/commands.py file.
   2. Copy executables to somewhere in the $PATH. (If you don't know: /usr/local/bin/)
@@ -24,7 +24,7 @@ Installation:
   5. Add key maps to your ~/.config/ranger/rc.conf
   6. Grant permissions in `System Settings > Privacy & Security > Accessibility` to `iTerm` and `osascript`
 
-Keymap Examples:
+# Keymap Examples:
 
  # Toggle followed file preview with Finder
       map <Space> chain show_files_in_finder; toggle_fplug
