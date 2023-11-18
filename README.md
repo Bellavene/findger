@@ -28,28 +28,20 @@ Keymap Examples:
 
  Toggle followed file preview with Finder
       `map <Space> chain show_files_in_finder; toggle_fplug`
-
  Show selected files in Finder
       `map <alt>/  show_files_in_finder`
-
  Go to path of the front Finder window
       `map <alt>?  get_finder`
-
  Mark file in ranger and Finder
       `map ' red_tag`
-
  Open Finder's file info on selected file
       `map <a-i> shell -f finder-file-info %f`
-
  Toggle instant video playback / Image previews with mpv
       `map p toggle_termplug`
-
  Play in sync 2 selected video files
       `map m2 shell mpv-play-synced %p`
-
  Play in sync 3 selected video files
       `map m3 shell mpv-play-synced-3 %p`
-
  Play in sync 4 selected video files
       `map m4 shell mpv-play-synced-4 %p`
 
