@@ -26,6 +26,7 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
 
 # Keymap Examples:
 
+```
  # Toggle followed file preview with Finder
       map <Space> chain show_files_in_finder; toggle_fplug
  # Show selected files in Finder
@@ -44,6 +45,7 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
       map m3 shell mpv-play-synced-3 %p
  # Play in sync 4 selected video files
       map m4 shell mpv-play-synced-4 %p
+```
 
 Todo: Add better cross support for Finder's color tags.
 
