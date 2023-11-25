@@ -1,0 +1,8 @@
+#!/usr/bin/env osascript
+tell application "System Events"
+        tell process "Finder"
+            set frontmost to true
+            click (menu item 5) of menu "Edit" of menu bar 1
+        end tell
+end tell
+tell application "Finder" to set frontmost to false

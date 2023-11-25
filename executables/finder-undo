@@ -1,0 +1,4 @@
+#!/usr/bin/env osascript
+tell application "Finder" to set frontmost to true
+tell application "System Events" to keystroke "z" using {command down}
+tell application "Finder" to set frontmost to false
