@@ -8,11 +8,12 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
 # Features
 
   1. Follow selection in Finder. Useful with Gallery view mode (Command+4 in Finder).
-  2. Reveals selected file from active Finder window to Ranger.
-  3. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
-  4. Toggle synced red tag on selection in Finder and Ranger.
-  5. Toggle instant playback or image preview through mpv.
-  6. Synced playback of video files (up to 4) through mpv.
+  2. Copy / move files through Finder
+  3. Reveals selected file from active Finder window to Ranger.
+  4. Reveals selected files from Ranger in Finder. (Code from Ranger's wiki)
+  5. Toggle synced red tag on selection in Finder and Ranger.
+  6. Toggle instant playback or image preview through mpv.
+  7. Synced playback of video files (up to 4) through mpv.
 
 # Installation
 
@@ -32,6 +33,10 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
       map <alt>/  show_files_in_finder
  # Go to path of the front Finder window
       map <alt>?  get_finder
+ # Copy / Move / Undo files through Finder
+      map <alt>c chain show_files_in_finder; shell -s finder-copy
+      map <alt>v chain follow_files_in_finder; shell -s finder-paste
+      map <alt>z shell -s finder-undo
  # Mark file in ranger and Finder
       map ' red_tag
  # Open Finder's file info on selected file
