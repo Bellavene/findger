@@ -34,7 +34,7 @@ map <a-i>   shell -f finder-file-info %f  # Open Finder's file info on selection
 map p       toggle_termplug               # Toggle instant video playback / Image previews with mpv
 map m2      shell mpv-play-synced %p      # Play in sync 2 selected video files
 map m3      shell mpv-play-synced-3 %p    # Play in sync 3 selected video files
-map m4 shell mpv-play-synced-4 %p         # Play in sync 4 selected video files
+map m4      shell mpv-play-synced-4 %p    # Play in sync 4 selected video files
 ```
 
 Todo: Add better cross support for Finder's color tags.
