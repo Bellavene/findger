@@ -87,7 +87,7 @@ class red_tag(Command):
 # MPV Follow/Preview selection
 # MPV Preview
 import time
-class toggle_termplug(Command):
+class findger_mpv(Command):
     def execute(self):
         p = not self.fm.settings["_termplug"]
         self.fm.settings["_termplug"] = p
