@@ -28,10 +28,10 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
 ```
 map <Space> findger                       # Toggle followed file preview through Finder
 map <alt>/  finder_show                   # Show selected files in Finder
-map <alt>?  get_finder                    # Go to path of the front Finder window
+map <alt>?  finder_get                    # Go to path of the front Finder window
 map '       red_tag                       # Mark file red in ranger and Finder
 map <a-i>   shell -f finder-file-info %f  # Open Finder's file info on selection
-map p       toggle_termplug               # Toggle instant video playback / Image previews with mpv
+map p       findger_mpv                   # Toggle instant video playback / Image previews with mpv
 map m2      shell mpv-play-synced %p      # Play in sync 2 selected video files
 map m3      shell mpv-play-synced-3 %p    # Play in sync 3 selected video files
 map m4      shell mpv-play-synced-4 %p    # Play in sync 4 selected video files
