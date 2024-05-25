@@ -1,9 +1,0 @@
-#!/usr/bin/env osascript
-activate application "mpv"
-tell application "System Events"
-    tell application process "mpv"
-      keystroke "w" using control down
-    end tell
-end tell
-tell application "System Events" to set visible of process "mpv" to false
-

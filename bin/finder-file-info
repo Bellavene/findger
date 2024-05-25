@@ -1,8 +1,0 @@
-#!/bin/zsh
-osascript - "$@" <<EOF
-on run argv
- set cmd to argv
-        set aFile to (POSIX file "$@") as alias
-        tell application "Finder" to open information window of aFile
-end run
-EOF
