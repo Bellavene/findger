@@ -1,5 +1,5 @@
 # Finder plug
-class finder_plug(Command):
+class findger(Command):
     def execute(self):
             self.fm.execute_console(f"finder_show")
             self.fm.execute_console(f"finder_toggle")
