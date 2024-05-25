@@ -7,4 +7,3 @@ tell application "System Events"
 end tell
 tell application "System Events" to set visible of process "mpv" to false
 
-#killall mpv-bundle
