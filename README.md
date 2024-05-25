@@ -26,7 +26,7 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
 # Keymap Examples
 
 ```
-map <Space> finder_plug                   # Toggle followed file preview through Finder
+map <Space> findger                       # Toggle followed file preview through Finder
 map <alt>/  finder_show                   # Show selected files in Finder
 map <alt>?  get_finder                    # Go to path of the front Finder window
 map '       red_tag                       # Mark file red in ranger and Finder
