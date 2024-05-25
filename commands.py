@@ -53,7 +53,7 @@ class fplug(Command):
             self.fm.notify(e)
 
 # Show files from Finder
-class from_finder(Command):
+class finder_get(Command):
     def execute(self):
         import subprocess
         import os
