@@ -8,5 +8,4 @@ set minus_ to a_ - b_
 set parentPath to text 1 thru (minus_) of thePath
 tell application "Finder" to set target of front Finder window to (POSIX file parentPath)
 tell application "Finder" to reveal thePath as POSIX file
-tell application "Finder" to set frontmost to false
 EOF
