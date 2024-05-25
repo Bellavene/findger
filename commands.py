@@ -53,7 +53,7 @@ class fplug(Command):
             self.fm.notify(e)
 
 # Show files from Finder
-class to_finder(Command):
+class from_finder(Command):
     def execute(self):
         import subprocess
         import os
@@ -72,6 +72,12 @@ class quicklook(Command):
     def execute(self):
             self.fm.execute_console("shell -s osascript -e 'tell application \"Finder\" to activate' -e 'tell application \"System Events\" to keystroke \"y\" using {command down, option down}'")
 
+# AirDrop
+class airdrop(Command):
+    def execute(self):
+            self.fm.notify("Sending %s")
+            self.fm.execute_console(f"shell -s airdrop '%s'")
+
 # Toggle Finder's red and ranger's standard tags on selected files
 class red_tag(Command):
     def execute(self):
@@ -79,6 +85,7 @@ class red_tag(Command):
         self.fm.execute_console("tag_toggle")
 
 # MPV Follow/Preview selection
+# MPV Preview
 import time
 class toggle_termplug(Command):
     def execute(self):
@@ -98,10 +105,8 @@ class termplug(Command):
                 self.fm.notify(f"termplug script not found")
             elif os.path.isfile(f):
                 self.fm.execute_console(f"shell -s termplug '{f}'")
-                # self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate'")
-                self.fm.execute_console(f"shell -s osascript -e 'tell application \"mpv\" to set frontmost to false'")
+                self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate'osascript -e 'tell application \"iTerm\" to activate")
             elif os.path.isdir(f):
-                self.fm.execute_console(f"shell -s osascript -e 'tell application \"mpv\" to set frontmost to false'")
-                # self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate'")
+                self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate';osascript -e 'tell application \"iTerm\" to activate")
         except Exception as e:
             self.fm.notify(e)
