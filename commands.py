@@ -94,10 +94,9 @@ class red_tag(Command):
         self.fm.execute_console('shell -s if [ "$(tag -l -N %s)" = "red" ]; then; tag -r "red" %s; elif [ "$(tag -l -N %s)" = "" ]; then; tag -a "red" %s; fi')
         self.fm.execute_console("tag_toggle")
 
-# MPV Follow/Preview selection
 # MPV Preview
 import time
-class findger_mpv(Command):
+class toggle_termplug(Command):
     def execute(self):
         p = not self.fm.settings["_termplug"]
         self.fm.settings["_termplug"] = p
@@ -109,14 +108,15 @@ class termplug(Command):
         try:
             f = self.rest(1)
             if not do_preview:
-                # self.fm.execute_console(f"shell -s killall mpv-bundle")
                 self.fm.execute_console(f"shell -s mpv-close-front")
             elif not termplug:
                 self.fm.notify(f"termplug script not found")
             elif os.path.isfile(f):
-                self.fm.execute_console(f"shell -s termplug '{f}'")
-                self.fm.execute_console(f"shell -s osascript -e 'tell application \"mpv\" to set frontmost to false'")
+                self.fm.execute_console(f"shell -s termplug '{f}';osascript -e 'tell application \"iTerm\" to activate'")
+                # time.sleep(0.8)
+                self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate'")
             elif os.path.isdir(f):
-                self.fm.execute_console(f"shell -s osascript -e 'tell application \"mpv\" to set frontmost to false'")
+                self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate'")
         except Exception as e:
             self.fm.notify(e)
+
