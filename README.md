@@ -30,7 +30,7 @@ map <Space> findger                       # Toggle followed file preview through
 map <alt>/  finder_show                   # Show selected files in Finder
 map <alt>?  finder_get                    # Go to path of the front Finder window
 map '       red_tag                       # Mark file red in ranger and Finder
-map <a-i>   shell -f finder-file-info %f  # Open Finder's file info on selection
+map <a-i>   finder_info %f                # Open Finder's file info on selection
 map p       findger_mpv                   # Toggle instant video playback / Image previews with mpv
 map m2      shell mpv-play-synced %p      # Play in sync 2 selected video files
 map m3      shell mpv-play-synced-3 %p    # Play in sync 3 selected video files
