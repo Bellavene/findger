@@ -115,8 +115,8 @@ class termplug(Command):
                 self.fm.notify(f"termplug script not found")
             elif os.path.isfile(f):
                 self.fm.execute_console(f"shell -s termplug '{f}'")
-                self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate'osascript -e 'tell application \"iTerm\" to activate")
+                self.fm.execute_console(f"shell -s osascript -e 'tell application \"mpv\" to set frontmost to false'")
             elif os.path.isdir(f):
-                self.fm.execute_console(f"shell -s osascript -e 'tell application \"iTerm\" to activate';osascript -e 'tell application \"iTerm\" to activate")
+                self.fm.execute_console(f"shell -s osascript -e 'tell application \"mpv\" to set frontmost to false'")
         except Exception as e:
             self.fm.notify(e)
