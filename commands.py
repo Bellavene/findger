@@ -42,7 +42,7 @@ class fplug(Command):
             f = self.rest(1)
             if not do_preview:
                 self.fm.execute_console(f"finder_list")
-                self.fm.execute_console(f"shell -s osascript -e 'tell application \"Finder\" to close its front window'")
+                self.fm.execute_console(f"shell -s osascript -e 'tell application \"Finder\" to close its front window' -e 'tell application \"iTerm\" to activate'")
             elif not termplug:
                 self.fm.notify(f"fplug script not found")
             elif os.path.isfile(f):
