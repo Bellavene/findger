@@ -1,2 +1,21 @@
-#!/bin/zsh
-mpv --lavfi-complex='[vid1] [vid2] hstack [vo]' $1 --external-file=$2
+#!/usr/bin/env zsh
+
+if [ "$#" -eq 1 ]; then
+
+    mpv $1
+
+elif [ "$#" -eq 2 ]; then
+
+    mpv --profile=multi --lavfi-complex='[vid1] [vid2] vstack [vo]' $1 --external-file=$2
+
+elif [ "$#" -eq 3 ]; then
+
+    mpv --lavfi-complex="[vid1][vid2][vid3]vstack=inputs=3[vo]" $1 --external-file=$2 --external-file=$3
+
+elif [ "$#" -eq 4 ]; then
+
+    mpv --lavfi-complex='[vid1] [vid2] hstack [t1] ; [vid3] [vid4] hstack [t2] ; [t1] [t2] vstack [vo]' $1 --external-file=$2 --external-file=$3 --external-file=$4
+
+else
+    echo "Incorrect number of files. This script requires from up to 4 files."
+fi
