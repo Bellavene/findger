@@ -6,7 +6,7 @@ if [ "$#" -eq 1 ]; then
 
 elif [ "$#" -eq 2 ]; then
 
-    mpv --profile=multi --lavfi-complex='[vid1] [vid2] vstack [vo]' $1 --external-file=$2
+    mpv --lavfi-complex='[vid1] [vid2] vstack [vo]' $1 --external-file=$2
 
 elif [ "$#" -eq 3 ]; then
 
