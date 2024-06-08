@@ -33,9 +33,7 @@ map <alt>?  finder_get                    # Go to path of the front Finder windo
 map '       red_tag                       # Mark file red in ranger and Finder
 map <a-i>   finder_info %f                # Open Finder's file info on selection
 map p       findger_mpv                   # Toggle instant video playback / Image previews with mpv
-map m2      shell mpv-play-synced %p      # Play in sync 2 selected video files
-map m3      shell mpv-play-synced-3 %p    # Play in sync 3 selected video files
-map m4      shell mpv-play-synced-4 %p    # Play in sync 4 selected video files
+map ms      shell mpv-play-synced %p      # Play in sync 2 selected video files
 ```
 
 Todo: Add better cross support for Finder's color tags.
