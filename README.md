@@ -18,7 +18,7 @@ Uses Finder to preview virtually anything, the rest depends on quicklook plugins
 
   1. Add the contents of commands.py to your `~/.config/ranger/commands.py` file.
   2. Copy fplug.py and termplug.py to ~/.config/ranger/plugins
-  3. Copy executables to somewhere in the $PATH(If you don't know: /usr/local/bin/). If they don't run, use `chmod +x` on them.
+  3. Copy executables to somewhere in the $PATH(If you don't know: /usr/local/bin/).
   4. Install dependencies: `brew install tag mpv iterm2` (If you are using another terminal application, then change iterm in the scripts to desired manually.)
   5. Copy setting for mpv from mpv.conf to `~/.config/mpv/mpv.conf`
   6. Add key maps to your `~/.config/ranger/rc.conf`
