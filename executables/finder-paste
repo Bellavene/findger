@@ -1,0 +1,22 @@
+#!/usr/bin/env osascript
+use framework "AppKit"
+use Finder : application "Finder"
+
+property this : a reference to current application
+property NSFileManager : a reference to NSFileManager of this
+property NSImage : a reference to NSImage of this
+property NSMutableArray : a reference to NSMutableArray of this
+property NSPasteboard : a reference to NSPasteboard of this
+property NSString : a reference to NSString of this
+property NSURL : a reference to NSURL of this
+
+property pb : missing value
+
+on run input
+    set p to POSIX file ((input)) as alias
+    set pb to NSPasteboard's generalPasteboard()
+    set fs to (pb's readObjectsForClasses:[NSURL] options:[]) as list
+    tell application "Finder" to repeat with f in fs
+        duplicate fs to p
+    end repeat
+end run
