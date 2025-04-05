@@ -1,6 +1,7 @@
+import os
+import time
 import atexit
 import subprocess
-import os
 
 # Finder plug
 class findger(Command):
@@ -99,7 +100,6 @@ class red_tag(Command):
         self.fm.execute_console("tag_toggle")
 
 # MPV Preview
-import time
 class toggle_termplug(Command):
     def execute(self):
         p = not self.fm.settings["_termplug"]
