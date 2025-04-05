@@ -1,3 +1,7 @@
+import atexit
+import subprocess
+import os
+
 # Finder plug
 class findger(Command):
     def execute(self):
@@ -7,7 +11,6 @@ class findger(Command):
 # Show in Finder
 class finder_show(Command):
     def execute(self):
-        import subprocess
         files = ",".join(['"{0}" as POSIX file'.format(file.path) for file in self.fm.thistab.get_selection()])
         reveal_script = "tell application \"Finder\" to reveal {{{0}}}".format(files)
         activate_script = "--"
@@ -59,8 +62,6 @@ class fplug(Command):
 # Show files from Finder
 class finder_get(Command):
     def execute(self):
-        import subprocess
-        import os
         finder = self.fm.execute_command("osascript -e 'tell app \"Finder\" to POSIX path of (selection as alias)'",
                                       universal_newlines=True, stdout=subprocess.PIPE)
         stdout, _ = finder.communicate()
@@ -73,7 +74,6 @@ class finder_get(Command):
 
 class finder_info(Command):
     def execute(self):
-        import subprocess
         files = ",".join(['"{0}" as POSIX file'.format(file.path) for file in self.fm.thistab.get_selection()])
         reveal_script = "set aFile to {{{0}}} as alias".format(files)
         activate_script = "tell application \"Finder\" to open information window of aFile"
