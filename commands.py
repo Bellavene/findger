@@ -57,7 +57,6 @@ class fplug(Command):
             self.fm.notify(e)
                 @atexit.register
         def cleanup():
-                self.fm.execute_console(f"finder_list")
                 self.fm.execute_console(f"shell -s osascript -e 'tell application \"Finder\" to close its front window' -e 'tell application \"iTerm\" to activate'")
 
 # Show files from Finder
